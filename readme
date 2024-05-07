@@ -1,0 +1,23 @@
+ <Route path="/">
+            <Home />
+          </Route>
+
+          <Route path="/contact">
+            <Contact />
+          </Route>
+
+          <Route path="/about">
+            <About />
+          </Route>
+
+          <Route path="/house">
+            <House />
+          </Route>
+
+          <Route path="/house/house-details/:id">
+            <HouseDetails />
+          </Route>
+
+          <Route path="*">
+            <Notfound />
+          </Route>
