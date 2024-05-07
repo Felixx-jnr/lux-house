@@ -3,14 +3,17 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import House from "./pages/House";
-import HouseDetails from "./pages/HouseDetails";
+import Properties from "./pages/Properties";
+import PropertiesDetails from "./pages/PropertiesDetails";
 import Notfound from "./pages/Notfound";
+import Navbar from "./components/Navbar";
+import { Consultation } from "./pages/Consultation";
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <Navbar />
         <div className="container">
           <Routes>
             <Route
@@ -26,12 +29,16 @@ function App() {
               element={<About />}
             />
             <Route
-              path="/house"
-              element={<House />}
+              path="/properties"
+              element={<Properties />}
             />
             <Route
-              path="/house/house-details/:id"
-              element={<HouseDetails />}
+              path="/properties/properties-details/:id"
+              element={<PropertiesDetails />}
+            />
+            <Route
+              path="/consultation"
+              element={<Consultation />}
             />
             <Route
               path="*"
