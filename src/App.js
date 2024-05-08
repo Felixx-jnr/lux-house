@@ -7,14 +7,14 @@ import Properties from "./pages/Properties";
 import PropertiesDetails from "./pages/PropertiesDetails";
 import Notfound from "./pages/Notfound";
 import Navbar from "./components/Navbar";
-import { Consultation } from "./pages/Consultation";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
-        <div className="container">
+        <div className="content">
           <Routes>
             <Route
               path="/"
@@ -36,16 +36,14 @@ function App() {
               path="/properties/properties-details/:id"
               element={<PropertiesDetails />}
             />
-            <Route
-              path="/consultation"
-              element={<Consultation />}
-            />
+
             <Route
               path="*"
               element={<Notfound />}
             />
           </Routes>
         </div>
+        <Footer />
       </div>
     </Router>
   );
