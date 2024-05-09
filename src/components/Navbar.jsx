@@ -30,7 +30,7 @@ const Navbar = () => {
     return () => {
       document.removeEventListener("click", handleClickOutside, true);
     };
-  }, [open]);
+  }, [open, handleClickOutside]);
 
   return (
     <div className="fixed top-0 w-full z-10 bg-neutral-800 text-white">
@@ -75,7 +75,7 @@ const Navbar = () => {
         }`}
         style={{ top: "60px" }} // Dropdown starts below the navbar
       >
-        <ul className="flex flex-col justify-center items-center text-center h-full">
+        <ul className="flex flex-col justify-center items-center mb-16 text-center h-full">
           {Links.map((link) => (
             <li
               key={link.name}

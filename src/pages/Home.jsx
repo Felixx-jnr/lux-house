@@ -2,12 +2,15 @@ import React from "react";
 import home from "../asset/1.mp4";
 import { motion } from "framer-motion";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLock, faHouse, faGlobe } from "@fortawesome/free-solid-svg-icons";
+
 const Home = () => {
   return (
-    <div className="relative mt-14 w-full">
+    <div className="relative mb-48 mt-14 w-full">
       <video
         style={{
-          height: "500px",
+          height: "550px",
           width: "100%",
           objectFit: "cover",
           filter: "brightness(40%)",
@@ -48,6 +51,18 @@ const Home = () => {
           fugit similique hic quo laborum suscipit alias eaque repellendus
           obcaecati libero?
         </motion.p>
+      </div>
+
+      <div className="h-28 w-[35%] p-6 bg-slate-700 absolute -bottom-16 left-[50%] -translate-x-1/2 rounded-full">
+        <span>
+          <FontAwesomeIcon icon={faGlobe} />
+        </span>
+        <span>
+          <FontAwesomeIcon icon={faHouse} />
+        </span>
+        <span>
+          <FontAwesomeIcon icon={faLock} />
+        </span>
       </div>
     </div>
   );
