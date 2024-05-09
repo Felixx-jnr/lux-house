@@ -8,6 +8,7 @@ import PropertiesDetails from "./pages/PropertiesDetails";
 import Notfound from "./pages/Notfound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ComingSoon from "./pages/ComingSoon";
 
 function App() {
   return (
@@ -35,6 +36,11 @@ function App() {
             <Route
               path="/properties/properties-details/:id"
               element={<PropertiesDetails />}
+            />
+
+            <Route
+              path="/coming"
+              element={<ComingSoon />}
             />
 
             <Route

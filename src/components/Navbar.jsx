@@ -1,55 +1,102 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../asset/luxlogo.png";
 import NavBtn from "./NavBtn";
 
 const Navbar = () => {
-  let Links = [
+  const [open, setOpen] = useState(false);
+
+  const Links = [
     { name: "HOME", link: "/" },
     { name: "PROPERTIES", link: "/properties" },
     { name: "ABOUT", link: "/about" },
     { name: "CONTACT", link: "/contact" },
   ];
-  let [open, setOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setOpen(!open);
+
+    document.body.style.overflow = !open ? "hidden" : "auto"; // Disable scrolling when open
+  };
+
+  const handleClickOutside = (event) => {
+    if (open && event.target.className.includes("dropdown-overlay")) {
+      setOpen(false);
+      document.body.style.overflow = "auto"; // Restore scrolling when closing the dropdown
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside, true);
+    return () => {
+      document.removeEventListener("click", handleClickOutside, true);
+    };
+  }, [open]);
+
   return (
-    <div className="md:flex items-center bg-neutral-800 fixed top-0 z-10 w-full">
-      <div className="font-semibold cursor-pointer flex items-center max-md:bg-slate-600 text-2xl ">
-        <span className="ml-12 mt-1">
+    <div className="fixed top-0 w-full z-10 bg-neutral-800 text-white">
+      <div className="flex justify-between items-center px-6 pb-1">
+        <div className="font-semibold text-2xl flex items-center">
           <img
             className="w-16"
             src={logo}
             alt="Lux houses"
           />
-        </span>
-        LUX HOUSES
-      </div>
+          <span className="ml-2">LUXE HOUSES</span>
+        </div>
 
-      <div
-        onClick={() => setOpen(!open)}
-        className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"
-      >
-        <ion-icon name={open ? "close" : "menu"}></ion-icon>
-      </div>
+        {/* Toggle Button for Medium/Small Screens */}
+        <div
+          onClick={toggleDropdown}
+          className="text-3xl cursor-pointer pt-2 md:hidden"
+        >
+          <ion-icon name={open ? "close" : "menu"}></ion-icon>
+        </div>
 
-      <ul
-        className={`md:flex md:items-center ml-auto mr-10 max-md:bg-slate-600 absolute md:static md:z-auto z-[-1] left-0 w-full h-full md:w-auto md:pl-0 pl-9 ease-in ${
-          open ? "top-15 " : "top-[-1000px]"
-        }`}
-      >
-        {Links.map((link) => (
-          <li
-            key={link.name}
-            className="max-md:  ml-16 font-bold md:my-0 text-1xl"
-          >
-            <a
-              href={link.link}
-              className=""
+        {/* Links for Large Screens */}
+        <ul className="hidden md:flex space-x-8 items-center">
+          {Links.map((link) => (
+            <li
+              key={link.name}
+              className="font-bold text-lg"
             >
-              {link.name}
-            </a>
+              <a href={link.link}>{link.name}</a>
+            </li>
+          ))}
+          <li>
+            <NavBtn />
           </li>
-        ))}
-        <NavBtn></NavBtn>
-      </ul>
+        </ul>
+      </div>
+
+      {/* Full-Screen Dropdown for Medium/Small Screens */}
+      <div
+        className={`dropdown-overlay fixed left-0 w-full h-full bg-neutral-800 transition-transform duration-300 z-20 flex flex-col justify-center items-center text-white md:hidden ${
+          open ? "translate-y-0" : "translate-y-full"
+        }`}
+        style={{ top: "60px" }} // Dropdown starts below the navbar
+      >
+        <ul className="flex flex-col justify-center items-center text-center h-full">
+          {Links.map((link) => (
+            <li
+              key={link.name}
+              className="py-6 text-2xl font-bold"
+            >
+              <a
+                href={link.link}
+                onClick={() => {
+                  setOpen(false);
+                  document.body.style.overflow = "auto"; // Restore scrolling when clicking a link
+                }}
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
+          <li>
+            <NavBtn />
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

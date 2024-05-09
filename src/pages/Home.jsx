@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <div className="relative mt-16 w-full">
+    <div className="relative mt-14 w-full">
       <video
         style={{
           height: "500px",
           width: "100%",
           objectFit: "cover",
-          filter: "brightness(50%)",
+          filter: "brightness(40%)",
         }}
         autoPlay
         loop
@@ -26,13 +26,23 @@ const Home = () => {
         <motion.h1
           initial={{ x: -1000 }}
           animate={{ x: 0 }}
+          transition={{
+            delay: 0.3,
+            type: "spring",
+            stiffness: 150,
+          }}
           className="text-7xl"
         >
-          LUX HOUSES
+          LUXE HOUSES
         </motion.h1>
         <motion.p
           initial={{ x: 1000 }}
           animate={{ x: 0 }}
+          transition={{
+            delay: 0.5,
+            type: "spring",
+            stiffness: 150,
+          }}
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
           fugit similique hic quo laborum suscipit alias eaque repellendus
