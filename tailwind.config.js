@@ -9,6 +9,7 @@ module.exports = {
         black: "var(--black)",
         white: "var(--white)",
         nav: "var(--nav)",
+        background: "var(--background)",
       },
     },
   },

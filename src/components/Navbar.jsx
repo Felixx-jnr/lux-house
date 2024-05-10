@@ -41,7 +41,7 @@ const Navbar = () => {
             src={logo}
             alt="Lux houses"
           />
-          <span className="ml-2 text-gold text-[110%] lg:text-[150%]">
+          <span className="ml-2 text-gold text-[100%] lg:text-[120%]">
             LUXE HOUSES
           </span>
         </div>

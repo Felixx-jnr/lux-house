@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faHouse, faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const rightVariant = {
-  initial: { x: -1000 },
+  initial: { x: "-100vw" },
   animate: {
     x: 0,
     transition: {
@@ -19,7 +19,7 @@ const rightVariant = {
 };
 
 const leftVariant = {
-  initial: { x: 1000 },
+  initial: { x: "100vw" },
   animate: {
     x: 0,
     transition: {
@@ -32,7 +32,7 @@ const leftVariant = {
 
 const Home = () => {
   return (
-    <div className="relative mb-48 mt-14 w-full">
+    <div className="relative mb-48 mt-14 w-full border-b border-gold">
       <video
         style={{
           height: "550px",
@@ -50,12 +50,12 @@ const Home = () => {
         />
         Your browser does not support the video tag.
       </video>
-      <div className="absolute top-[50%] text-gold left-[50%] -translate-x-1/2 -translate-y-1/2 text-3xl font-bold ">
+      <div className="absolute top-[50%] text-gold left-[50%] -translate-x-1/2 -translate-y-1/2 text-3xl font-bold w-[80%]">
         <motion.h1
           variants={leftVariant}
           animate="animate"
           initial="initial"
-          className="text-7xl"
+          className="text-5xl"
         >
           LUXE HOUSES
         </motion.h1>
@@ -63,34 +63,49 @@ const Home = () => {
           variants={rightVariant}
           initial="initial"
           animate="animate"
+          className="my-4"
         >
           {" "}
           amet consectetur adipisicing elit. Accusamus fugit similique hic quo
-          laborum suscipit alias eaque repellendus obcaecati libero?
+          laborum suscipit alias eaque repellendus obcaecati libero? Lorem ipsum
+          dolor sit
         </motion.p>
-        Lorem ipsum dolor sit
+
         <Link to="/properties">
           <motion.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-            whileHover={{ scale: 1.1 }}
-            className="button mt-2 p-1 "
+            transition={{ delay: 1, ease: "easeIn" }}
+            className="button p-2 text-xl"
           >
             Go To Properties
           </motion.button>
         </Link>
       </div>
 
-      <div className="h-28 w-[35%] p-6 bg-nav absolute -bottom-16 left-[50%] -translate-x-1/2 rounded-full">
-        <span>
-          <FontAwesomeIcon icon={faGlobe} />
+      <div className="flex border border-gold items-center justify-center h-28 w-[35%] p-6 bg-nav absolute -bottom-16 left-[50%] -translate-x-1/2 rounded-full text-gold">
+        <span className="mx-3 flex flex-col items-center justify-center">
+          <FontAwesomeIcon
+            className="text-5xl mb-2"
+            icon={faGlobe}
+          />
+          <p className="font-semibold ">1K+ HOUSES</p>
         </span>
-        <span>
-          <FontAwesomeIcon icon={faHouse} />
+
+        <span className="mx-3 flex flex-col items-center justify-center">
+          <FontAwesomeIcon
+            className="text-[230%] mb-2"
+            icon={faHouse}
+          />
+          <p className="font-semibold text-[100%] ">65 YEARS </p>
         </span>
-        <span>
-          <FontAwesomeIcon icon={faLock} />
+
+        <span className="mx-3 flex flex-col items-center justify-center">
+          <FontAwesomeIcon
+            className="text-5xl mb-2"
+            icon={faLock}
+          />
+          <p className="font-semibold ">1M+ CUSTOMERS</p>
         </span>
       </div>
     </div>
