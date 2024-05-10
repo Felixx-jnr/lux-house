@@ -1,31 +1,27 @@
-:root {
-  --gold: #f1d60e;
+// :root {
+//   --gold: #f1d60e;
+//   --navyblue: #334155;
+//   --white: #ffffff;
+//   --black: #000000;
 
-  // DARK MODE COLORS
-  --dark-bg: #000000;
-  --white: #ffffff;
+// }
 
-  //LIGHT-MODE-COLORS
-  --light-bg: #ffffff;
-  --dark: #000000;
-}
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --background: var(--light-bg);
+//     --text-color: var(--white);
+//     --text-gold: var(--gold);
+//   }
+// }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: var(--light-bg);
-    --text-color: var(--white);
-    --text-gold: var(--gold);
-  }
-}
+// body.light {
+//   --background: var(--light-bg);
+//   --text-color: var(--white);
+//   --text-gold: var(--gold);
+// }
 
-body.light {
-  --background: var(--light-bg);
-  --text-color: var(--white);
-  --text-gold: var(--gold);
-}
-
-body.dark {
-  --background: var(--dark-bg);
-  --text-color: var(--dark);
-  --text-gold: var(--gold);
-}
+// body.dark {
+//   --background: var(--dark-bg);
+//   --text-color: var(--dark);
+//   --text-gold: var(--gold);
+// }

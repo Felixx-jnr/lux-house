@@ -4,3 +4,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  //DARK MODE
+  --gold: rgb(241, 214, 14);
+  --navyblue: #334155;
+  --white: #ffffff;
+  --nav: #323232;
+  --black: #000000;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --gold: rgb(255, 225, 0);
+    --nav: #7d7b7b;
+    --navyblue: #334155;
+    --white: #000;
+    --black: #fffff0;
+  }
+}

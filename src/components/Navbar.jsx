@@ -30,18 +30,20 @@ const Navbar = () => {
     return () => {
       document.removeEventListener("click", handleClickOutside, true);
     };
-  }, [open, handleClickOutside]);
+  }, [open]);
 
   return (
-    <div className="fixed top-0 w-full z-10 bg-neutral-800 text-white">
+    <div className="fixed top-0 w-full z-10 bg-nav py-1">
       <div className="flex justify-between items-center px-6 pb-1">
         <div className="font-semibold text-2xl flex items-center">
           <img
-            className="w-16"
+            className="lg:w-16 w-14"
             src={logo}
             alt="Lux houses"
           />
-          <span className="ml-2">LUXE HOUSES</span>
+          <span className="ml-2 text-gold text-[110%] lg:text-[150%]">
+            LUXE HOUSES
+          </span>
         </div>
 
         {/* Toggle Button for Medium/Small Screens */}
@@ -53,11 +55,11 @@ const Navbar = () => {
         </div>
 
         {/* Links for Large Screens */}
-        <ul className="hidden md:flex space-x-8 items-center">
+        <ul className="hidden md:flex items-center text-gold -mr-3 lg:mr-6">
           {Links.map((link) => (
             <li
               key={link.name}
-              className="font-bold text-lg"
+              className="font-bold lg:ml-24 ml-10 text-xl hover:text-white"
             >
               <a href={link.link}>{link.name}</a>
             </li>
