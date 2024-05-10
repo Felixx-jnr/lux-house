@@ -7,19 +7,19 @@
 
 :root {
   //DARK MODE
-  --gold: rgb(241, 214, 14);
+  --gold: #f1d60e;
   --navyblue: #334155;
   --white: #ffffff;
-  --nav: #323232;
   --black: #000000;
+  --nav: #323232;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --gold: rgb(255, 225, 0);
-    --nav: #7d7b7b;
+    --gold: #ffe100;
     --navyblue: #334155;
     --white: #000;
     --black: #fffff0;
+    --nav: #7d7b7b;
   }
 }
