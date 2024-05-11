@@ -1,7 +1,7 @@
 import React from "react";
 
 const Properties = () => {
-  return <div>Properties</div>;
+  return <div className="text-gold">Properties</div>;
 };
 
 export default Properties;

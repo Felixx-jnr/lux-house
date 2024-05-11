@@ -1,0 +1,50 @@
+main {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+main div {
+  //background: #fff;
+}
+
+.one {
+  grid-column: span 2;
+  height: 400px;
+}
+
+.two {
+  height: 300px;
+}
+
+main .tall {
+  grid-row: span 2;
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width: 960px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 620px) {
+  main {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 400px;
+    margin: 20px auto;
+  }
+
+  nav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  nav h1 {
+    grid-column: 1/5;
+    grid-row: 1;
+  }
+}

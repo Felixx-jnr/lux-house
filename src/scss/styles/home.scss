@@ -1,12 +1,12 @@
 .button {
   text-align: center;
   color: #f1d60e;
-  background: black; /* default color */
+  background: var(--black); /* default color */
   display: inline;
   border: #f1d60e 1px solid;
   border-radius: 10px;
   /* "to left" / "to right" - affects initial color */
-  background: linear-gradient(to left, #161515 50%, #f1d60e 50%) right;
+  background: linear-gradient(to left, var(--black) 50%, #f1d60e 50%) right;
   background-size: 200%;
   transition: 0.5s ease-out;
 }

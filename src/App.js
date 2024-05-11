@@ -9,6 +9,7 @@ import Notfound from "./pages/Notfound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ComingSoon from "./pages/ComingSoon";
+import Grid from "./components/Grid";
 
 function App() {
   return (
@@ -41,6 +42,11 @@ function App() {
             <Route
               path="/coming"
               element={<ComingSoon />}
+            />
+
+            <Route
+              path="/grid"
+              element={<Grid />}
             />
 
             <Route
