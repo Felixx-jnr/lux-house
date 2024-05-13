@@ -33,7 +33,7 @@ const leftVariant = {
 const Home = () => {
   return (
     <>
-      <div className="relative mb-28 mt-14 w-full border-b border-gold">
+      <div className="relative mb-28 mt-15 w-full border-b border-gold">
         <video
           style={{
             height: "550px",

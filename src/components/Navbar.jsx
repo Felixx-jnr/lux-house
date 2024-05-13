@@ -1,6 +1,7 @@
+// Inside your Navbar component
+
 import React, { useState, useEffect } from "react";
 import logo from "../asset/luxlogo.png";
-import NavBtn from "./NavBtn";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -32,12 +33,21 @@ const Navbar = () => {
     };
   }, [open]);
 
+  const handleLinkClick = (link) => {
+    //setOpen(false);
+    document.body.style.overflow = "auto"; // Restore scrolling when clicking a link
+
+    setTimeout(() => {
+      window.location.href = link;
+    }, 0); // Adjust the timeout to match your transition duration
+  };
+
   return (
-    <div className="fixed top-0 w-full z-10 bg-nav py-1">
+    <div className=" fixed top-0 w-full z-10 bg-nav">
       <div className="flex justify-between items-center px-6 pb-1">
         <div className="font-semibold text-2xl flex items-center">
           <img
-            className="lg:w-16 w-14"
+            className=" w-14"
             src={logo}
             alt="Lux houses"
           />
@@ -59,14 +69,11 @@ const Navbar = () => {
           {Links.map((link) => (
             <li
               key={link.name}
-              className="font-bold lg:ml-20 ml-10 text-xl hover:text-white"
+              className="font-bold lg:ml-20 ml-10 text-xl hover:text-white cursor-pointer"
             >
-              <a href={link.link}>{link.name}</a>
+              <a onClick={() => handleLinkClick(link.link)}>{link.name}</a>
             </li>
           ))}
-          <li>
-            <NavBtn />
-          </li>
         </ul>
       </div>
 
@@ -81,22 +88,11 @@ const Navbar = () => {
           {Links.map((link) => (
             <li
               key={link.name}
-              className="py-6 text-2xl font-bold hover:text-white"
+              className="py-6 text-2xl font-bold hover:text-white cursor-pointer"
             >
-              <a
-                href={link.link}
-                onClick={() => {
-                  setOpen(false);
-                  document.body.style.overflow = "auto"; // Restore scrolling when clicking a link
-                }}
-              >
-                {link.name}
-              </a>
+              <a onClick={() => handleLinkClick(link.link)}>{link.name}</a>
             </li>
           ))}
-          <li>
-            <NavBtn />
-          </li>
         </ul>
       </div>
     </div>

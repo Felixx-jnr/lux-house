@@ -1,67 +1,61 @@
 import React from "react";
+import house from "../asset/house.jpeg";
 
 const Grid = () => {
   return (
-    <div className="my-20">
-      <main>
-        <div class="short one">
-          <h1>01</h1>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            sequi accusamus dolorem commodi.
-          </p>
-        </div>
-
-        <div className="tall two relative border border-black">
-          <p className="absolute -top-3 right-0 bg-background px-3  ">
+    <main className=" ">
+      <section className="section-one">
+        <div className="relative writeup ">
+          <p className="absolute -top-3 left-0 bg-background px-3 font-bold ">
             Engineering Expertise
           </p>
-          <div className="grid grid-cols-2">
-            <h1 className="text-[30px]">01</h1>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto
-              sequi accusamus dolorem commodi.
+
+          <div className="one">
+            <h1 className=" text-[800%] leading-none font-bold ">01</h1>
+
+            <p className="pt-4 font-semibold text-justify p-2">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
+              harum minus, fuga esse reiciendis accusantium ad quam molestias
+              dignissimos soluta? Quasi soluta nulla quam sint expedita maxime
+              aliquid quo aut, similique
             </p>
           </div>
         </div>
 
-        <div class="short three">
-          <h1>01</h1>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            sequi accusamus dolorem commodi.
+        <img
+          className="pic"
+          src={house}
+          alt=""
+          style={{ width: "100%" }}
+        />
+      </section>
+
+      <section className="section-two">
+        <img
+          className="pic"
+          src={house}
+          alt=""
+          style={{ width: "100%" }}
+        />
+
+        <div className="relative writeup ">
+          <p className="absolute -top-3 left-0 bg-background px-3 font-bold ">
+            Engineering Expertise
           </p>
-        </div>
 
-        <div class="tall four">
-          <img src="" />
-        </div>
+          <div className="two">
+            <p className="pt-4 font-semibold text-justify p-2">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
+              harum minus, fuga esse reiciendis accusantium ad quam molestias
+              dignissimos soluta? Quasi soluta nulla quam sint expedita maxime
+              aliquid quo aut, similique
+            </p>
 
-        <div class="short five">
-          <h1>01</h1>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            sequi accusamus dolorem commodi.
-          </p>
+            <h1 className=" text-[800%] leading-none font-bold ">01</h1>
+          </div>
         </div>
-
-        <div class="tall six">
-          <img src="" />
-        </div>
-
-        <div class="short seven">
-          <h1>01</h1>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            sequi accusamus dolorem commodi.
-          </p>
-        </div>
-
-        <div class="tall eight">
-          <img src="" />
-        </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 };
 
