@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ComingSoon from "./pages/ComingSoon";
 import Grid from "./components/Grid";
+import ReviewModal from "./components/ReviewModal";
 
 function App() {
   return (
@@ -47,6 +48,11 @@ function App() {
             <Route
               path="/grid"
               element={<Grid />}
+            />
+
+            <Route
+              path="/review"
+              element={<ReviewModal />}
             />
 
             <Route
