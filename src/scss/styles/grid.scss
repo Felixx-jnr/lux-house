@@ -3,7 +3,7 @@
   max-width: 1300px;
   grid-template-columns: 0.7fr 1fr;
   align-items: center;
-  margin: 60px auto;
+  margin: -10px auto;
   padding: 20px;
   gap: 20px;
 }
@@ -22,10 +22,10 @@
 
 .section-two {
   display: grid;
-  max-width: 1300px;
+  max-width: 1200px;
   grid-template-columns: 1fr 0.7fr;
   align-items: center;
-  margin: 60px auto;
+  margin: -12px auto;
   padding: 20px;
   gap: 20px;
 }
