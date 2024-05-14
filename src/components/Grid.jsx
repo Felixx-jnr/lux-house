@@ -39,7 +39,7 @@ const Grid = () => {
         />
 
         <div className="relative writeup ">
-          <p className="absolute -top-3 left-0 bg-background px-3 font-bold ">
+          <p className="absolute -top-3 right-0 bg-background px-3 font-bold ">
             Engineering Expertise
           </p>
 
@@ -91,7 +91,7 @@ const Grid = () => {
         />
 
         <div className="relative writeup ">
-          <p className="absolute -top-3 left-0 bg-background px-3 font-bold ">
+          <p className="absolute -top-3 right-0 bg-background px-3 font-bold ">
             Engineering Expertise
           </p>
 
