@@ -40,7 +40,7 @@ const ReviewModal = () => {
   const duplicatedSlides = [...slides, ...slides];
 
   return (
-    <div className="my-20 relative w-[90%] bg-gold mx-auto overflow-hidden p-3">
+    <div className="my-20 relative w-[90%] bg-black mx-auto rounded-xl overflow-hidden p-3">
       <motion.div
         className="flex mx-16"
         animate={{
@@ -64,7 +64,7 @@ const ReviewModal = () => {
               <p className="mb-1 italic font-semibold text-gold">
                 {slide.name}
               </p>
-              <p className=" ">{slide.review}</p>
+              <p className=" text-white ">{slide.review}</p>
             </div>
           </div>
         ))}

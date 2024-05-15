@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faUser, faClock } from "@fortawesome/free-solid-svg-icons";
+import ReviewModal from "../components/ReviewModal";
+import Grid from "../components/Grid";
 
 const rightVariant = {
   initial: { x: "-100vw" },
@@ -112,38 +114,36 @@ const Home = () => {
       </div>
 
       <div className="flex justify-center mb-14">
-        <div className="button w-[30%] mx-[2%] bg-nav p-4 text-center">
+        <div className="bg-nav border border-gold  text-gold rounded-2xl w-[30%] mx-[2%] p-4 text-center">
           <FontAwesomeIcon
-            className="text-3xl mb-2 p-2 rounded-[50%]"
+            className="text-3xl pb-2 rounded-[50%]"
             icon={faUser}
           />
-          <h3 className="text-center w-auto">GENERAL LABOUR</h3>
+          <h3 className="text-center mb-2">GENERAL LABOUR</h3>
           <p className="text-left">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, ea!
             Quaerat nobis quas accusamus temporibus. Mollitia quidem ipsa minima
             quae.
           </p>
         </div>
-
-        <div className="button w-[30%] mx-[2%] bg-nav p-4 text-center">
+        <div className="bg-nav border border-gold  text-gold rounded-2xl w-[30%] mx-[2%] p-4 text-center">
           <FontAwesomeIcon
-            className="text-3xl mb-2 p-2 rounded-[50%]"
+            className="text-3xl pb-2 rounded-[50%]"
             icon={faUser}
           />
-          <h3 className="text-center w-auto">GENERAL LABOUR</h3>
+          <h3 className="text-center mb-2">GENERAL LABOUR</h3>
           <p className="text-left">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, ea!
             Quaerat nobis quas accusamus temporibus. Mollitia quidem ipsa minima
             quae.
           </p>
         </div>
-
-        <div className="button w-[30%] mx-[2%] bg-nav p-4 text-center">
+        <div className="bg-nav border border-gold  text-gold rounded-2xl w-[30%] mx-[2%] p-4 text-center">
           <FontAwesomeIcon
-            className="text-3xl mb-2 p-2 rounded-[50%]"
+            className="text-3xl pb-2 rounded-[50%]"
             icon={faUser}
           />
-          <h3 className="text-center w-auto">GENERAL LABOUR</h3>
+          <h3 className="text-center mb-2">GENERAL LABOUR</h3>
           <p className="text-left">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, ea!
             Quaerat nobis quas accusamus temporibus. Mollitia quidem ipsa minima
@@ -152,7 +152,11 @@ const Home = () => {
         </div>
       </div>
 
-      <h2>EXPLORE OUR SERVICES</h2>
+      <h2 className="text-center font-bold text-gold text-5xl mb-5">
+        EXPLORE OUR SERVICES
+      </h2>
+      <Grid />
+      <ReviewModal />
     </>
   );
 };
