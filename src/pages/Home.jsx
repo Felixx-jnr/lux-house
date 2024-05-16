@@ -194,7 +194,6 @@ const Home = () => {
         EXPLORE OUR SERVICES
       </h2>
       <Grid />
-      <ReviewModal />
       <Slider />
     </>
   );

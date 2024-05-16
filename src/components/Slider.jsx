@@ -52,9 +52,9 @@ const Slider = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className=" bg-nav mx-2 w-60 p-2"
+            className=" bg-nav mx-2 w-60 p-2 flex flex-col place-items-center"
           >
-            <img className=" mb-2 p-2 rounded-[50%] bg-gold w-14 h-14" />
+            <img className=" mb-2 p-2 rounded-[50%] bg-gold w-14 h-14 " />
             <p className="mb-1 italic font-semibold text-gold">{slide.name}</p>
             <p className=" text-white ">{slide.review}</p>
           </div>
@@ -65,7 +65,7 @@ const Slider = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className=" bg-nav mx-2 w-60 p-2"
+            className=" bg-nav mx-2 w-60 p-2 flex flex-col place-items-center"
           >
             <img className=" mb-2 p-2 rounded-[50%] bg-gold w-14 h-14" />
             <p className="mb-1 italic font-semibold text-gold">{slide.name}</p>
