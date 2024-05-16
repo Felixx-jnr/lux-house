@@ -1,6 +1,6 @@
 @keyframes slide {
   from {
-    tranform: translateX(0);
+    tranform: translateX(0%);
   }
   to {
     transform: translateX(-100%);
@@ -8,7 +8,7 @@
 }
 
 .reviews-slide {
-  animation: 35s slide infinite linear;
+  animation: 5s slide infinite linear;
 }
 
 .reviews:before,
@@ -23,12 +23,12 @@
 
 .reviews:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(2, 6, 23));
 }
 
 .reviews:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(2, 6, 23));
 }
 
 .reviews:hover .reviews-slide {
