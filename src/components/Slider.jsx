@@ -1,23 +1,77 @@
 import React from "react";
 
+const slides = [
+  {
+    name: "Alice",
+    review:
+      "Luxe Houses is simply amazing! From the first consultation to the final walkthrough, their attention to detail and dedication to creating a serene environment were evident. I'm beyond thrilled with my new home!",
+    image: "",
+  },
+  {
+    name: "Alice",
+    review:
+      "Luxe Houses is simply amazing! From the first consultation to the final walkthrough, their attention to detail and dedication to creating a serene environment were evident. I'm beyond thrilled with my new home!",
+    image: "",
+  },
+  {
+    name: "David",
+    review:
+      "Luxe Houses exceeded my wildest dreams! The team's passion for creating extraordinary living spaces shines through in every aspect of their work. Living here feels like stepping into a fairytale every day.",
+    image: "",
+  },
+  {
+    name: "David",
+    review:
+      "Luxe Houses exceeded my wildest dreams! The team's passion for creating extraordinary living spaces shines through in every aspect of their work. Living here feels like stepping into a fairytale every day.",
+    image: "",
+  },
+  {
+    name: "Sophia",
+    review:
+      "Luxe Houses truly elevated my expectations! Their innovative designs and commitment to excellence have set a new standard in luxury living. I feel like I'm living in a five-star resort every day.",
+    image: "",
+  },
+  {
+    name: "Michael",
+    review:
+      "Luxe Houses is where luxury meets tranquility. The seamless blend of modern design and natural elements creates an atmosphere of pure bliss. My home here is not just a place, but a sanctuary.",
+    image: "",
+  },
+  {
+    name: "Emily",
+    review:
+      "Luxe Houses lives up to its name in every way. From the peaceful surroundings to the thoughtful design, every moment spent here feels like a retreat. Choosing Luxe Houses was the best decision I've made",
+    image: "",
+  },
+];
+
 const Slider = () => {
   return (
     <div className="reviews relative bg-slate-950 flex">
-      <div className="reviews-slide flex ">
-        <div className="mx-8 w-40 h-40 bg-orange-400"></div>
-        <div className="mx-8 w-40 h-40 bg-cyan-400"></div>
-        <div className="mx-8 w-40 h-40 bg-pink-400"></div>
-        <div className="mx-8 w-40 h-40 bg-blue-400"></div>
-        <div className="mx-8 w-40 h-40 bg-green-400"></div>
-        <div className="mx-8 w-40 h-40 bg-yellow-400"></div>
+      <div className="reviews-slide flex py-4">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className=" bg-nav mx-2 w-60 p-2"
+          >
+            <img className=" mb-2 p-2 rounded-[50%] bg-gold w-14 h-14" />
+            <p className="mb-1 italic font-semibold text-gold">{slide.name}</p>
+            <p className=" text-white ">{slide.review}</p>
+          </div>
+        ))}
       </div>
-      <div className="reviews-slide flex">
-        <div className="mx-8 w-40 h-40 bg-orange-400"></div>
-        <div className="mx-8 w-40 h-40 bg-cyan-400"></div>
-        <div className="mx-8 w-40 h-40 bg-pink-400"></div>
-        <div className="mx-8 w-40 h-40 bg-blue-400"></div>
-        <div className="mx-8 w-40 h-40 bg-green-400"></div>
-        <div className="mx-8 w-40 h-40 bg-yellow-400"></div>
+
+      <div className="reviews-slide flex py-4">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className=" bg-nav mx-2 w-60 p-2"
+          >
+            <img className=" mb-2 p-2 rounded-[50%] bg-gold w-14 h-14" />
+            <p className="mb-1 italic font-semibold text-gold">{slide.name}</p>
+            <p className=" text-white ">{slide.review}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
