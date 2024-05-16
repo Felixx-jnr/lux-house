@@ -14,18 +14,18 @@ body {
   --background: #1d1a1a;
   --gold: #f1d60e;
   --navyblue: #334155;
-  --white: #ffffff;
-  --black: #000000;
+  --white: #fff;
+  --black: #000;
   --nav: #323232;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background: #e2e3f2;
+    --background: #919191;
     --gold: #ffe100;
-    --navyblue: #334155;
+    --navyblue: #eafcf8e9;
     --white: #000;
     --black: #444;
-    --nav: #7d7b7b;
+    --nav: #646363;
   }
 }
