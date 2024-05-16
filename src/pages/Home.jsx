@@ -2,11 +2,13 @@ import React from "react";
 import home from "../asset/1.mp4";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import Tilt from "react-parallax-tilt";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faUser, faClock } from "@fortawesome/free-solid-svg-icons";
 import ReviewModal from "../components/ReviewModal";
 import Grid from "../components/Grid";
+import Slider from "../components/Slider";
 
 const rightVariant = {
   initial: { x: "-100vw" },
@@ -31,6 +33,18 @@ const leftVariant = {
     },
   },
 };
+
+const customOptions = {
+  reverse: false, // reverse the tilt direction
+  max: 35, // max tilt rotation (degrees)
+  perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
+  scale: 2, // 2 = 200%, 1.5 = 150%, etc..
+  speed: 1000, // Speed of the enter/exit transition
+  transition: true, // Set a transition on enter/exit.
+  axis: null, // What axis should be disabled. Can be X or Y.
+  reset: false, // If the tilt effect has to be reset on exit.
+  easing: "cubic-bezier(.03,.98,.52,.99)",
+}; // Easing on enter/exit.
 
 const Home = () => {
   return (
@@ -113,8 +127,16 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex justify-center mb-14">
-        <div className="bg-nav border border-gold  text-gold rounded-2xl w-[30%] mx-[2%] p-4 text-center">
+      <div className="flex max-sm:block  justify-center mb-14">
+        <Tilt
+          glareEnable={true}
+          glareMaxOpacity={0.3}
+          glareColor="#ffffff"
+          glarePosition="all"
+          scale={1.1}
+          glareBorderRadius="10px"
+          className="bg-nav max-md:max-w-[100%] max-md:w-[90%] max-md:mb-8 max-md:mx-auto border border-gold  text-gold rounded-2xl w-[30%] mx-[2%] p-4 text-center"
+        >
           <FontAwesomeIcon
             className="text-3xl pb-2 rounded-[50%]"
             icon={faUser}
@@ -125,8 +147,16 @@ const Home = () => {
             Quaerat nobis quas accusamus temporibus. Mollitia quidem ipsa minima
             quae.
           </p>
-        </div>
-        <div className="bg-nav border border-gold  text-gold rounded-2xl w-[30%] mx-[2%] p-4 text-center">
+        </Tilt>
+        <Tilt
+          glareEnable={true}
+          glareMaxOpacity={0.3}
+          glareColor="#ffffff"
+          glarePosition="all"
+          scale={1.1}
+          glareBorderRadius="10px"
+          className="bg-nav max-md:max-w-[100%] max-md:w-[90%] max-md:mb-8 max-md:mx-auto border border-gold  text-gold rounded-2xl w-[30%] mx-[2%] p-4 text-center"
+        >
           <FontAwesomeIcon
             className="text-3xl pb-2 rounded-[50%]"
             icon={faUser}
@@ -137,8 +167,16 @@ const Home = () => {
             Quaerat nobis quas accusamus temporibus. Mollitia quidem ipsa minima
             quae.
           </p>
-        </div>
-        <div className="bg-nav border border-gold  text-gold rounded-2xl w-[30%] mx-[2%] p-4 text-center">
+        </Tilt>
+        <Tilt
+          glareEnable={true}
+          glareMaxOpacity={0.3}
+          glareColor="#ffffff"
+          glarePosition="all"
+          scale={1.1}
+          glareBorderRadius="10px"
+          className="bg-nav max-md:max-w-[100%] max-md:w-[90%] max-md:mb-8 max-md:mx-auto border border-gold  text-gold rounded-2xl w-[30%] mx-[2%] p-4 text-center"
+        >
           <FontAwesomeIcon
             className="text-3xl pb-2 rounded-[50%]"
             icon={faUser}
@@ -149,7 +187,7 @@ const Home = () => {
             Quaerat nobis quas accusamus temporibus. Mollitia quidem ipsa minima
             quae.
           </p>
-        </div>
+        </Tilt>
       </div>
 
       <h2 className="text-center font-bold text-gold text-5xl mb-5">
@@ -157,6 +195,7 @@ const Home = () => {
       </h2>
       <Grid />
       <ReviewModal />
+      <Slider />
     </>
   );
 };
