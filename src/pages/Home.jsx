@@ -6,9 +6,9 @@ import Tilt from "react-parallax-tilt";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faUser, faClock } from "@fortawesome/free-solid-svg-icons";
-import ReviewModal from "../components/ReviewModal";
 import Grid from "../components/Grid";
 import Slider from "../components/Slider";
+import Footer from "../components/Footer";
 
 const rightVariant = {
   initial: { x: "-100vw" },
@@ -34,22 +34,10 @@ const leftVariant = {
   },
 };
 
-const customOptions = {
-  reverse: false, // reverse the tilt direction
-  max: 35, // max tilt rotation (degrees)
-  perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
-  scale: 2, // 2 = 200%, 1.5 = 150%, etc..
-  speed: 1000, // Speed of the enter/exit transition
-  transition: true, // Set a transition on enter/exit.
-  axis: null, // What axis should be disabled. Can be X or Y.
-  reset: false, // If the tilt effect has to be reset on exit.
-  easing: "cubic-bezier(.03,.98,.52,.99)",
-}; // Easing on enter/exit.
-
 const Home = () => {
   return (
     <>
-      <div className="relative mb-28 mt-15 w-full border-b border-gold">
+      <div className="relative mb-28 mt-15 w-full border-b-2 border-gold">
         <video
           style={{
             height: "550px",
@@ -67,12 +55,12 @@ const Home = () => {
           />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute top-[50%] text-gold left-[50%] -translate-x-1/2 -translate-y-1/2 text-3xl font-bold w-[80%]">
+        <div className="absolute top-[52%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-gold w-[80%] max-md:w-[90%]">
           <motion.h1
             variants={leftVariant}
             animate="animate"
             initial="initial"
-            className="text-5xl"
+            className="lg:text-5xl text-4xl font-bold"
           >
             LUXE HOUSES
           </motion.h1>
@@ -80,7 +68,7 @@ const Home = () => {
             variants={rightVariant}
             initial="initial"
             animate="animate"
-            className="my-4"
+            className="my-4 lg:text-3xl md:text-2xl text-xl"
           >
             {" "}
             amet consectetur adipisicing elit. Accusamus fugit similique hic quo
@@ -93,41 +81,47 @@ const Home = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, ease: "easeIn" }}
-              className="button p-2 text-xl"
+              className="button p-2 text-xl font-semibold"
             >
               Go To Properties
             </motion.button>
           </Link>
         </div>
 
-        <div className="flex border border-gold items-center justify-center h-28 w-[35%] p-6 bg-nav absolute -bottom-16 left-[50%] -translate-x-1/2 rounded-2xl text-gold">
+        <div className="flex border-2 h-28 sm:h-24 lg:h-24 justify-center align-middle border-gold p-1 bg-nav absolute -bottom-14 sm:-bottom-12 lg:-bottom-12 left-[50%] -translate-x-1/2 rounded-2xl text-gold">
           <span className="mx-3 flex flex-nowrap flex-col items-center justify-center">
             <FontAwesomeIcon
-              className="lg:text-5xl text-3xl mb-2 flex-nowrap"
+              className="lg:text-4xl text-2xl mb-2 flex-nowrap"
               icon={faHouse}
             />
-            <p className="font-semibold text-center">1K+ HOUSES</p>
+            <p className="font-bold text-center lg:text-lg text-sm">
+              1K+ HOUSES
+            </p>
           </span>
 
           <span className="mx-3 flex flex-col items-center justify-center">
             <FontAwesomeIcon
-              className="lg:text-5xl  text-3xl mb-2"
+              className="lg:text-4xl  text-2xl mb-2"
               icon={faClock}
             />
-            <p className="text-center font-semibold">65 YEARS </p>
+            <p className="text-center font-bold lg:text-lg text-sm">
+              65 YEARS{" "}
+            </p>
           </span>
 
           <span className="mx-3 flex flex-col items-center justify-center">
             <FontAwesomeIcon
-              className="text-3xl lg:text-5xl mb-2"
+              className="text-2xl lg:text-4xl mb-2"
               icon={faUser}
             />
-            <p className="font-semibold text-center">1M+ CUSTOMERS</p>
+            <p className="font-bold text-center lg:text-lg text-sm">
+              1M+ CUSTOMERS
+            </p>
           </span>
         </div>
       </div>
 
-      <div className="flex max-sm:block  justify-center mb-14">
+      <div className="flex place-items-center max-sm:flex-col mb-14 gap-7 mx-4">
         <Tilt
           glareEnable={true}
           glareMaxOpacity={0.3}
@@ -135,13 +129,13 @@ const Home = () => {
           glarePosition="all"
           scale={1.1}
           glareBorderRadius="10px"
-          className="bg-nav max-md:max-w-[100%] max-md:w-[90%] max-md:mb-8 max-md:mx-auto border border-gold  text-gold rounded-2xl w-[30%] mx-[2%] p-4 text-center"
+          className="bg-nav max-md:max-w-[100%] max-md:w-[90%] border-gold border-2 text-gold rounded-2xl w-[30%] p-4 text-center"
         >
           <FontAwesomeIcon
-            className="text-3xl pb-2 rounded-[50%]"
-            icon={faUser}
+            className="text-4xl pb-2 rounded-[50%]"
+            icon={faHouse}
           />
-          <h3 className="text-center mb-2">GENERAL LABOUR</h3>
+          <h3 className="text-center mb-2 font-bold text-lg">1K+ HOUSES</h3>
           <p className="text-left">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, ea!
             Quaerat nobis quas accusamus temporibus. Mollitia quidem ipsa minima
@@ -155,13 +149,13 @@ const Home = () => {
           glarePosition="all"
           scale={1.1}
           glareBorderRadius="10px"
-          className="bg-nav max-md:max-w-[100%] max-md:w-[90%] max-md:mb-8 max-md:mx-auto border border-gold  text-gold rounded-2xl w-[30%] mx-[2%] p-4 text-center"
+          className="bg-nav max-md:max-w-[100%] max-md:w-[90%] border-2 border-gold  text-gold rounded-2xl w-[30%] p-4 text-center"
         >
           <FontAwesomeIcon
-            className="text-3xl pb-2 rounded-[50%]"
-            icon={faUser}
+            className="text-4xl pb-2 rounded-[50%]"
+            icon={faClock}
           />
-          <h3 className="text-center mb-2">GENERAL LABOUR</h3>
+          <h3 className="text-center mb-2 font-bold text-lg">65 YEARS</h3>
           <p className="text-left">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, ea!
             Quaerat nobis quas accusamus temporibus. Mollitia quidem ipsa minima
@@ -175,13 +169,13 @@ const Home = () => {
           glarePosition="all"
           scale={1.1}
           glareBorderRadius="10px"
-          className="bg-nav max-md:max-w-[100%] max-md:w-[90%] max-md:mb-8 max-md:mx-auto border border-gold  text-gold rounded-2xl w-[30%] mx-[2%] p-4 text-center"
+          className="bg-nav max-md:max-w-[100%] max-md:w-[90%] border-2 border-gold text-gold rounded-2xl w-[30%] p-4 text-center"
         >
           <FontAwesomeIcon
-            className="text-3xl pb-2 rounded-[50%]"
+            className="text-4xl pb-2 rounded-[50%]"
             icon={faUser}
           />
-          <h3 className="text-center mb-2">GENERAL LABOUR</h3>
+          <h3 className="text-center mb-2 font-bold text-lg">1M+ CUSTOMERS</h3>
           <p className="text-left">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, ea!
             Quaerat nobis quas accusamus temporibus. Mollitia quidem ipsa minima
@@ -190,11 +184,12 @@ const Home = () => {
         </Tilt>
       </div>
 
-      <h2 className="text-center font-bold text-gold text-5xl mb-5">
-        EXPLORE OUR SERVICES
+      <h2 className="text-center font-bold text-gold my-8 lg:text-6xl md:text-5xl text-4xl">
+        EXPLORE OUR WORLD
       </h2>
       <Grid />
       <Slider />
+      <Footer />
     </>
   );
 };

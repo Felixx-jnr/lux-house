@@ -47,12 +47,12 @@ const slides = [
 
 const Slider = () => {
   return (
-    <div className="reviews relative bg-slate-950 flex">
+    <div className="reviews relative flex my-8 ">
       <div className="reviews-slide flex py-4">
         {slides.map((slide, index) => (
           <div
             key={index}
-            className=" bg-nav mx-2 w-60 p-2 flex flex-col place-items-center"
+            className=" card bg-black mx-2 w-60 p-2 flex flex-col place-items-center rounded-2xl"
           >
             <img className=" mb-2 p-2 rounded-[50%] bg-gold w-14 h-14 " />
             <p className="mb-1 italic font-semibold text-gold">{slide.name}</p>
@@ -65,7 +65,7 @@ const Slider = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className=" bg-nav mx-2 w-60 p-2 flex flex-col place-items-center"
+            className=" card bg-black mx-2 w-60 p-2 flex flex-col place-items-center rounded-2xl"
           >
             <img className=" mb-2 p-2 rounded-[50%] bg-gold w-14 h-14" />
             <p className="mb-1 italic font-semibold text-gold">{slide.name}</p>

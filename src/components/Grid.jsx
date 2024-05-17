@@ -28,7 +28,7 @@ const Grid = () => {
 
         <img
           className="pic"
-          src={house}
+          src="https://images.inc.com/uploaded_files/image/1920x1080/getty_637683624_365230.jpg"
           alt=""
           style={{ width: "100%" }}
         />
@@ -37,7 +37,7 @@ const Grid = () => {
       <section className="section-two">
         <img
           className="pic"
-          src={house}
+          src="https://png.pngtree.com/background/20230527/original/pngtree-3d-house-plans-in-pdf-picture-image_2767117.jpg"
           alt=""
           style={{ width: "100%" }}
         />
@@ -84,7 +84,7 @@ const Grid = () => {
 
         <img
           className="pic"
-          src={house}
+          src="https://maisonparagon.ca/wp-content/uploads/2018/07/PM-with-house-and-plan-2.jpg.webp"
           alt=""
           style={{ width: "100%" }}
         />
@@ -93,7 +93,7 @@ const Grid = () => {
       <section className="section-two">
         <img
           className="pic"
-          src={house}
+          src="https://static.vecteezy.com/system/resources/previews/024/843/377/non_2x/blueprint-designs-and-a-home-model-for-a-construction-project-background-in-real-estate-housing-project-building-and-engineering-design-ai-generated-photo.jpg"
           alt=""
           style={{ width: "100%" }}
         />

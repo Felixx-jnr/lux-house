@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <div className=" fixed top-0 w-full z-10 bg-nav">
-      <div className="flex justify-between items-center px-6 pb-1">
+      <div className="flex justify-between items-center px-4 pb-1">
         <div className="font-semibold text-2xl flex items-center">
           <img
             className=" w-14"
@@ -59,13 +59,13 @@ const Navbar = () => {
         {/* Toggle Button for Medium/Small Screens */}
         <div
           onClick={toggleDropdown}
-          className="text-4xl cursor-pointer pt-2 md:hidden text-gold"
+          className="text-4xl cursor-pointer pt-2 md:hidden text-gold "
         >
           <ion-icon name={open ? "close" : "menu"}></ion-icon>
         </div>
 
         {/* Links for Large Screens */}
-        <ul className="hidden md:flex items-center text-gold -mr-3 lg:mr-6">
+        <ul className="hidden md:flex items-center text-gold  lg:mr-6">
           {Links.map((link) => (
             <li
               key={link.name}
@@ -82,7 +82,7 @@ const Navbar = () => {
         className={`dropdown-overlay fixed left-0 w-full h-full bg-nav transition-transform duration-300 z-20 flex flex-col justify-center items-center text-white md:hidden ${
           open ? "translate-y-0" : "translate-y-full"
         }`}
-        style={{ top: "60px" }} // Dropdown starts below the navbar
+        style={{ top: "59px" }} // Dropdown starts below the navbar
       >
         <ul className="flex flex-col justify-center items-center mb-16 text-center h-full text-gold">
           {Links.map((link) => (

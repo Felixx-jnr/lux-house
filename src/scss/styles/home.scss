@@ -5,11 +5,16 @@
   display: inline;
   border: #f1d60e 1px solid;
   border-radius: 10px;
-  background: linear-gradient(to left, var(--black) 50%, #f1d60e 50%) right;
+  background: linear-gradient(to left, var(--nav) 50%, #f1d60e 50%) right;
   background-size: 200%;
   transition: 0.5s ease-out;
 }
 .button:hover {
   background-position: left;
   color: black;
+}
+
+.pic {
+  position: relative;
+  border: #f1d60e 2px solid;
 }
