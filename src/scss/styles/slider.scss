@@ -8,7 +8,7 @@
 }
 
 .reviews-slide {
-  animation: 30s slide infinite linear;
+  animation: 40s slide infinite linear;
 }
 
 .reviews:before,
@@ -37,9 +37,4 @@
     rgba(255, 255, 255, 0),
     var(--background) 60%
   );
-}
-
-.reviews:hover .reviews-slide {
-  animation-play-state: paused;
-  pointer-events: none;
 }

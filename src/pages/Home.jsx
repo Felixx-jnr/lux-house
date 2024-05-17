@@ -121,7 +121,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex place-items-center max-sm:flex-col mb-14 gap-7 mx-4">
+      <div className="flex max-sm:flex-col mb-14 max-w-[100%] mx-8 gap-6 md:gap-5">
         <Tilt
           glareEnable={true}
           glareMaxOpacity={0.3}
@@ -129,7 +129,7 @@ const Home = () => {
           glarePosition="all"
           scale={1.1}
           glareBorderRadius="10px"
-          className="bg-nav max-md:max-w-[100%] max-md:w-[90%] border-gold border-2 text-gold rounded-2xl w-[30%] p-4 text-center"
+          className="bg-nav border-gold border-2 text-gold rounded-2xl p-4 text-center "
         >
           <FontAwesomeIcon
             className="text-4xl pb-2 rounded-[50%]"
@@ -149,7 +149,7 @@ const Home = () => {
           glarePosition="all"
           scale={1.1}
           glareBorderRadius="10px"
-          className="bg-nav max-md:max-w-[100%] max-md:w-[90%] border-2 border-gold  text-gold rounded-2xl w-[30%] p-4 text-center"
+          className="bg-nav border-2 border-gold  text-gold rounded-2xl p-4 text-center"
         >
           <FontAwesomeIcon
             className="text-4xl pb-2 rounded-[50%]"
@@ -169,7 +169,7 @@ const Home = () => {
           glarePosition="all"
           scale={1.1}
           glareBorderRadius="10px"
-          className="bg-nav max-md:max-w-[100%] max-md:w-[90%] border-2 border-gold text-gold rounded-2xl w-[30%] p-4 text-center"
+          className="bg-nav border-2 border-gold text-gold rounded-2xl p-4 text-center"
         >
           <FontAwesomeIcon
             className="text-4xl pb-2 rounded-[50%]"
@@ -184,19 +184,25 @@ const Home = () => {
         </Tilt>
       </div>
 
-      <motion.h2
-        initial={{ x: "80vw" }}
-        animate={{ x: "-100vw" }}
-        transition={{
-          ease: "linear",
-          duration: 15,
-          repeat: Infinity,
-          repeatType: "loop",
-        }}
-        className="font-bold text-gold my-8 lg:text-6xl md:text-5xl text-4xl"
-      >
-        EXPLORE OUR WORLD
-      </motion.h2>
+      <div className="reviews relative flex mb-10">
+        <div className="reviews-slide flex ">
+          <div className="font-bold lg:text-5xl text-3xl w-[40rem] text-gold ">
+            EXPLORE OUR WORLD
+          </div>
+          <div className="font-bold lg:text-5xl text-3xl w-[40rem] text-gold ">
+            EXPLORE OUR WORLD
+          </div>
+        </div>
+
+        <div className="reviews-slide flex">
+          <div className="font-bold lg:text-5xl text-3xl w-[40rem] text-gold ">
+            EXPLORE OUR WORLD
+          </div>
+          <div className="font-bold lg:text-5xl text-3xl w-[40rem] text-gold ">
+            EXPLORE OUR WORLD
+          </div>
+        </div>
+      </div>
 
       <Grid />
       <Slider />
