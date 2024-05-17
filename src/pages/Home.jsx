@@ -1,6 +1,6 @@
 import React from "react";
 import home from "../asset/1.mp4";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import Tilt from "react-parallax-tilt";
 
@@ -184,9 +184,20 @@ const Home = () => {
         </Tilt>
       </div>
 
-      <h2 className="text-center font-bold text-gold my-8 lg:text-6xl md:text-5xl text-4xl">
+      <motion.h2
+        initial={{ x: "80vw" }}
+        animate={{ x: "-100vw" }}
+        transition={{
+          ease: "linear",
+          duration: 15,
+          repeat: Infinity,
+          repeatType: "loop",
+        }}
+        className="font-bold text-gold my-8 lg:text-6xl md:text-5xl text-4xl"
+      >
         EXPLORE OUR WORLD
-      </h2>
+      </motion.h2>
+
       <Grid />
       <Slider />
       <Footer />
