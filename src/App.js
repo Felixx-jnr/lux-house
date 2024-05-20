@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ComingSoon from "./pages/ComingSoon";
 import Grid from "./components/Grid";
-import ReviewModal from "./components/ReviewModal";
+import Slider from "./components/Slider";
 
 function App() {
   return (
@@ -52,7 +52,7 @@ function App() {
 
             <Route
               path="/review"
-              element={<ReviewModal />}
+              element={<Slider />}
             />
 
             <Route

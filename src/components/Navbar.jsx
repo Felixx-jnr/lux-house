@@ -1,10 +1,13 @@
-// Inside your Navbar component
-
 import React, { useState, useEffect } from "react";
 import logo from "../asset/luxlogo.png";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  const [mode, setMode] = useState(true);
 
   const Links = [
     { name: "HOME", link: "/" },
@@ -20,7 +23,17 @@ const Navbar = () => {
   };
 
   const handleClickOutside = (event) => {
-    if (open && event.target.className.includes("dropdown-overlay")) {
+    // Ensure event.target.className is a string
+    let className = event.target.className;
+    if (typeof className === "object" && className.baseVal) {
+      className = className.baseVal; // Handle SVGAnimatedString case
+    }
+
+    if (
+      open &&
+      typeof className === "string" &&
+      className.includes("dropdown-overlay")
+    ) {
       setOpen(false);
       document.body.style.overflow = "auto"; // Restore scrolling when closing the dropdown
     }
@@ -40,6 +53,12 @@ const Navbar = () => {
     setTimeout(() => {
       window.location.href = link;
     }, 0); // Adjust the timeout to match your transition duration
+  };
+
+  const toggleMode = (event) => {
+    const body = document.querySelector("body");
+
+    setMode(!mode);
   };
 
   return (
@@ -74,6 +93,12 @@ const Navbar = () => {
               <a onClick={() => handleLinkClick(link.link)}>{link.name}</a>
             </li>
           ))}
+
+          <FontAwesomeIcon
+            onClick={toggleMode}
+            className=" mode lg:text-lg ml-6 flex-nowrap"
+            icon={mode ? faMoon : faSun}
+          />
         </ul>
       </div>
 

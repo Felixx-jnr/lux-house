@@ -1,6 +1,6 @@
 import React from "react";
 import home from "../asset/1.mp4";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Tilt from "react-parallax-tilt";
 
@@ -186,21 +186,22 @@ const Home = () => {
 
       <div className="reviews relative flex mb-10">
         <div className="reviews-slide flex ">
-          <div className="font-bold lg:text-5xl text-3xl w-[40rem] text-gold ">
+          <div className="font-bold lg:text-5xl text-3xl w-[45rem] text-gold ">
             EXPLORE OUR WORLD
           </div>
-          <div className="font-bold lg:text-5xl text-3xl w-[40rem] text-gold ">
+          <div className="font-bold lg:text-5xl text-3xl w-[45rem] text-gold ">
             EXPLORE OUR WORLD
           </div>
         </div>
 
         <div className="reviews-slide flex">
-          <div className="font-bold lg:text-5xl text-3xl w-[40rem] text-gold ">
+          <div className="font-bold lg:text-5xl text-3xl w-[45rem] text-gold ">
             EXPLORE OUR WORLD
           </div>
-          <div className="font-bold lg:text-5xl text-3xl w-[40rem] text-gold ">
+          <div className="font-bold lg:text-5xl text-3xl w-[45rem] text-gold ">
             EXPLORE OUR WORLD
           </div>
+          *
         </div>
       </div>
 

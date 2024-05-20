@@ -47,33 +47,50 @@ const slides = [
 
 const Slider = () => {
   return (
-    <div className="reviews relative flex my-8 ">
-      <div className="reviews-slide flex py-4">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className=" card bg-black mx-2 w-60 p-2 flex flex-col place-items-center rounded-2xl"
-          >
-            <img className=" mb-2 p-2 rounded-[50%] bg-gold w-14 h-14 " />
-            <p className="mb-1 italic font-semibold text-gold">{slide.name}</p>
-            <p className=" text-white ">{slide.review}</p>
-          </div>
-        ))}
+    <>
+      <div className="ml-5">
+        <h2 className="lg:text-5xl text-4xl font-bold text-gold mt-16 ">
+          Here is what others have to say
+        </h2>
+        <p className="text-white font-medium">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe,
+          laudantium fugiat nam similique accusantium hic debitis ad facere
+          maiores praesentium!
+        </p>
       </div>
 
-      <div className="reviews-slide flex py-4">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className=" card bg-black mx-2 w-60 p-2 flex flex-col place-items-center rounded-2xl"
-          >
-            <img className=" mb-2 p-2 rounded-[50%] bg-gold w-14 h-14" />
-            <p className="mb-1 italic font-semibold text-gold">{slide.name}</p>
-            <p className=" text-white ">{slide.review}</p>
-          </div>
-        ))}
+      <div className="reviews relative flex mt-5 mb-14 ">
+        <div className="reviews-slide flex py-4">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className=" card bg-black mx-2 w-60 p-2 flex flex-col place-items-center rounded-2xl"
+            >
+              <img className=" mb-2 p-2 rounded-[50%] bg-gold w-14 h-14 " />
+              <p className="mb-1 italic font-semibold text-gold">
+                {slide.name}
+              </p>
+              <p className=" text-white ">{slide.review}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="reviews-slide flex py-4">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className=" card bg-black mx-2 w-60 p-2 flex flex-col place-items-center rounded-2xl"
+            >
+              <img className=" mb-2 p-2 rounded-[50%] bg-gold w-14 h-14" />
+              <p className="mb-1 italic font-semibold text-gold">
+                {slide.name}
+              </p>
+              <p className=" text-white ">{slide.review}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

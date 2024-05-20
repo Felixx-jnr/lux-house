@@ -17,10 +17,15 @@ const Footer = () => {
     <div className="footer">
       <div className="footer__overlay">
         <div className="footer__setup">
-          <h2 className="footer__name">FELIX UDOH</h2>
+          <div>
+            <h2 className="footer__name">LUXE HOUSE</h2>
+            <p className=" text-left">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Accusantium laboriosam ducimus atque distinctio numq
+            </p>
+          </div>
 
           <div className="footer__links">
-            <h2>LINKS</h2>
             <li>
               <a href="#about">About</a>
             </li>
@@ -28,12 +33,11 @@ const Footer = () => {
               <a href="#skills">Skills</a>
             </li>
             <li>
-              <a href="#project">Projects</a>
+              <a href="#project"></a>
             </li>
           </div>
 
           <div className="footer__contact">
-            <h2>CONTACTS</h2>
             <div className="main">
               <li>+234 705 771 8692</li>
               <li>

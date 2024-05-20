@@ -5,7 +5,7 @@ import no from "../asset/no.jpg";
 
 const Grid = () => {
   return (
-    <main>
+    <main className="my-16">
       <section className="section-one">
         <div className="relative writeup">
           <p className="absolute -top-3.5 left-0 bg-background px-3 font-bold lg:text-xl">
